@@ -1,0 +1,510 @@
+/*
+Theme Name: My Second WP Website
+Author: CodingDIY
+Author URI: https://www.inflearn.com/users/@codingdiy
+Version: 1.0
+Text Domain: mysecondwp
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 1.7;
+  background-color: #f1f5f8;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.section-content {
+  padding: 4rem 0;
+}
+
+.section-header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  border: 1px solid #ddd;
+  padding: 0.25rem 0.5rem;
+}
+
+.pagination a.prev,
+.pagination a.next {
+  text-decoration: none;
+  border: none;
+}
+
+.pagination .current {
+  font-weight: bold;
+  border: 1px solid blue;
+  padding: 0.25rem 0.5rem;
+  background-color: blue;
+  color: white;
+}
+
+/* Post meta styles */
+.post-meta {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 1rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.post-meta>*:not(.avatar) {
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.post-meta .avatar {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+
+.post-meta .post-author a {
+  text-decoration: none;
+}
+
+.post-meta .post-categories {
+  list-style: none;
+  display: inline-block;
+}
+
+.post-categories a {
+  text-decoration: none;
+}
+
+a[rel='tag'],
+a[rel='prev'],
+a[rel='next'] {
+  text-decoration: none;
+}
+
+/* Blog styles */
+.blog #post {
+  background-color: #fff;
+  width: 29%;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .blog #post {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0;
+  }
+
+  .blog #post {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.blog .post-featured-image {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.article-body h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-body h4 a {
+  text-decoration: none;
+}
+
+/* Post formats */
+.blog #post.format-aside {
+  background-color: yellowgreen;
+  clear: both;
+}
+
+.blog #post.format-aside h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.blog #post.format-aside a,
+.blog #post.format-status a,
+.blog #post.format-link a {
+  text-decoration: none;
+}
+
+.blog #post.format-aside small,
+.blog #post.format-status small {
+  border: none;
+}
+
+.blog #post.format-aside small {
+  float: right;
+}
+
+.blog #post.format-status {
+  background-color: skyblue;
+}
+
+.blog #post.format-link {
+  background-color: orangered;
+}
+
+.blog #post.format-link a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Archive & search styles */
+.archive main,
+.search main {
+  display: block;
+}
+
+.archive #post,
+.search #post {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1rem;
+}
+
+.archive #post .post-featured,
+.search #post .post-featured {
+  grid-column: 1/2;
+}
+
+.archive #post .article-body,
+.search #post .article-body {
+  grid-column: 2/-1;
+}
+
+.archive #post .post-featured-image,
+.search #post .post-featured-image {
+  width: 180px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+}
+
+.archive #post .post-text-with-featured,
+.search #post .post-text-with-featured {
+  grid-column: 2/-1;
+}
+
+/* Post styles */
+.single #post {
+  background-color: #fff;
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.single .post-featured {
+  display: flex;
+  justify-content: center;
+}
+
+.single .post-featured-image {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Page Styles */
+#page-banner {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#page-banner .overlay {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+#page-banner h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+#page-content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr;
+  gap: 1.5rem;
+}
+
+#page-content aside,
+#page-content article {
+  padding: 0.5rem;
+}
+
+#page-content aside {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#page-content aside ul {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #fff;
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+
+#page-content aside ul li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#page-content aside ul li:hover a {
+  color: #444;
+}
+
+#page-content aside ul li.current_page_item {
+  font-weight: bold;
+  border-left: 0.5rem solid navy;
+  padding-left: 0.5rem;
+}
+
+#page-content aside ul li.current_page_item a {
+  color: navy;
+}
+
+#page-content aside ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#page-content aside .page-widget {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#page-content aside .widget-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: navy;
+}
+
+#page-content article {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+}
+
+#page-content article p {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  #page-content {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #page-content {
+    display: block;
+  }
+
+  #page-content aside,
+  #page-content article {
+    padding: 1rem;
+  }
+}
+
+/* Nav Styles */
+#primary-nav {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.primary-nav ul {
+  list-style-type: none;
+}
+
+.primary-nav li {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.primary-nav li:hover {
+  border-bottom: 1px dashed #444;
+}
+
+.primary-nav li:hover a {
+  color: #444;
+}
+
+.primary-nav li.current-menu-item {
+  border-bottom: 2px solid navy;
+}
+
+.primary-nav li.current-menu-item a {
+  font-weight: bold;
+  color: navy;
+}
+
+.primary-nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer Styles */
+#footer {
+  border-top: 1px solid #ddd;
+}
+
+#footer .container {
+  text-align: center;
+}
+
+/* 404 Styles */
+#not-found {
+  height: calc(100vh - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found img {
+  width: 240px;
+  height: auto;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.not-found a.btn-404 {
+  background-color: navy;
+  padding: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease-in;
+}
+
+.not-found a.btn-404:hover {
+  background-color: blue;
+}
+
+@media screen and (max-width: 576px) {
+  #not-found {
+    height: calc(100vh - 46px);
+  }
+}
+
+/* Search form Styles */
+.search-query {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-query p {
+  font-size: 1.5rem;
+}
+
+.search-query label,
+.page-search label {
+  height: 43px;
+}
+
+.search-form {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-form .search-field {
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.search-form .search-submit {
+  background-color: navy;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.page-search {
+  margin-bottom: 2rem;
+}
