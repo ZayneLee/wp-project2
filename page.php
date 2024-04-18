@@ -15,7 +15,10 @@
 
             <section id="page-content" <?php post_class() ?>>
                 <aside>
-                    This is sidebar
+                    <ul class="page-list">
+                        <?php
+                        wp_list_pages(array('title_li' => '')) ?>
+                    </ul>
                 </aside>
                 <article>
                     <?php the_content() ?>
